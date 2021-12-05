@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using whichmovieisgood.Models.Entity;
 
 namespace whichmovieisgood.Controllers
 {
     public class WhichMovieIsGoodController : Controller
     {
+        whichmovieisgooddatabaseEntities db = new whichmovieisgooddatabaseEntities();
         // GET: WhichMovieIsGood
         public ViewResult AnaSayfa()
         {
@@ -30,8 +32,17 @@ namespace whichmovieisgood.Controllers
             return View();
         }
 
-        public ViewResult SignUp()
+        [HttpGet]
+        public ActionResult SingIn()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SingIn(TBLKISILER p1)
+        {
+            db.TBLKISILER.Add(p1);
+            db.SaveChanges();
             return View();
         }
     }
