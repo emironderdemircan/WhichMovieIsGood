@@ -179,6 +179,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\WhichMovieIsGoodController.cs" />
     <Compile Include="DataContext\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -263,6 +264,8 @@
     <Content Include="Views\WhichMovieIsGood\Iletisim.cshtml" />
     <Content Include="Views\WhichMovieIsGood\Login.cshtml" />
     <Content Include="Views\WhichMovieIsGood\SingIn.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
